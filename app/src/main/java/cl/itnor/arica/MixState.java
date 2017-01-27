@@ -1,6 +1,7 @@
 package cl.itnor.arica;
 
 import cl.itnor.arica.lib.MixContextInterface;
+import cl.itnor.arica.lib.MixStateInterface;
 import cl.itnor.arica.lib.MixUtils;
 import cl.itnor.arica.lib.render.Matrix;
 import cl.itnor.arica.lib.render.MixVector;
@@ -9,7 +10,7 @@ import cl.itnor.arica.lib.render.MixVector;
  * Created by effexts on 1/21/17.
  */
 
-public class MixState {
+public class MixState implements MixStateInterface {
     public static int NOT_STARTED = 0;
     public static int PROCESSING = 1;
     public static int READY = 2;
