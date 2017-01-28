@@ -28,7 +28,7 @@ public interface Marker extends Comparable<Marker>{
     MixVector getLocationVector();
     void update(Location currentGPSFix);
     void calcPaint(Camera viewCam, float addX, float addY);
-    void draw(PaintScreen dw);
+    void draw(PaintScreen paintScreen);
     public boolean fClick(float x, float y, MixContextInterface context, MixStateInterface state);
     int getMaxObjects();
 }
