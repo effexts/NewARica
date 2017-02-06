@@ -5,6 +5,7 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.widget.Toast;
 
+import cl.itnor.arica.lib.MixContextInterface;
 import cl.itnor.arica.lib.render.Matrix;
 import cl.itnor.arica.mgr.location.LocationFinder;
 import cl.itnor.arica.mgr.location.LocationFinderFactory;
@@ -15,7 +16,7 @@ import cl.itnor.arica.mgr.webcontent.WebContentManagerFactory;
  * Created by effexts on 1/19/17.
  */
 
-public class MixContext extends ContextWrapper {
+public class MixContext extends ContextWrapper implements MixContextInterface {
     public static final String TAG = "Turistear";
     private Mixview mixView;
     private Matrix rotationM = new Matrix();

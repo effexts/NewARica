@@ -12,7 +12,10 @@ public class Label implements ScreenObj, Parcelable {
     private float width, height;
     private ScreenObj screenObj;
 
-    protected Label(Parcel in) {
+    public Label() {
+    }
+
+    public Label(Parcel in) {
         x = in.readFloat();
         y = in.readFloat();
         width = in.readFloat();

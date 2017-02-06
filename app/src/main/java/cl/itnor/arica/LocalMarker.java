@@ -280,4 +280,32 @@ public abstract class LocalMarker implements Marker {
 
         return Double.compare(leftPm.getDistance(), rightPm.getDistance());
     }
+
+    @Override
+    public boolean equals(Object marker) {
+        return this.ID.equals(((Marker) marker).getID());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.ID.hashCode();
+    }
+
+    abstract public int getMaxObjects();
+
+    public Label getTxtLab() {
+        return txtLab;
+    }
+
+    public void setTxtLab(Label txtLab) {
+        this.txtLab = txtLab;
+    }
+
+    public TextObj getTextBlock() {
+        return textBlock;
+    }
+
+    public void setTextBlock(TextObj textBlock) {
+        this.textBlock = textBlock;
+    }
 }

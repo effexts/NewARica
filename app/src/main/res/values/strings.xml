@@ -7,4 +7,13 @@
     <string name="connection_error_dialog_button2">Open Settings</string>
     <string name="connection_error_dialog_button3">Close App</string>
     <string name="compass_calibration_unrealiable">Compass data unrealiable. Please recalibrate compass.</string>
+    <string name="N">N</string>
+    <string name="NE">NE</string>
+    <string name="E">E</string>
+    <string name="SE">SE</string>
+    <string name="S">S</string>
+    <string name="SW">SW</string>
+    <string name="W">W</string>
+    <string name="NW">NW</string>
+    <string name="refreshing">Refreshing</string>
 </resources>

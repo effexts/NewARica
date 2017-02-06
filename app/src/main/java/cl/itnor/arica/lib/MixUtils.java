@@ -17,4 +17,18 @@ public class MixUtils {
         float angle = (float) Math.toDegrees(Math.acos(cos));
         return (tmpv_x < 0) ? angle * -1 : angle;
     }
+
+    public static String formatDist(float meters) {
+        if (meters < 1000) return ((int) meters) + "m";
+        else if (meters < 10000) return formatDec(meters/1000f, 1) + "km";
+        else  return ((int) meters/1000f) + "km";
+    }
+
+    private static String formatDec(float value, int dec) {
+        int factor = (int) Math.pow(10, dec);
+        int front = (int) value;
+        int back = (int) Math.abs(value * factor) % factor;
+
+        return front + "" + back;
+    }
 }
