@@ -9,12 +9,12 @@ import android.view.View;
  */
 
 public class AugmentedView extends View {
-    Mixview app;
+    MixView app;
 
     public AugmentedView(Context context) {
         super(context);
         try {
-            app = (Mixview) context;
+            app = (MixView) context;
             app.killOnError();
         }
         catch (Exception ex) {

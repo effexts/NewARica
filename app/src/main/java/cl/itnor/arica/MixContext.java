@@ -18,12 +18,12 @@ import cl.itnor.arica.mgr.webcontent.WebContentManagerFactory;
 
 public class MixContext extends ContextWrapper implements MixContextInterface {
     public static final String TAG = "Turistear";
-    private Mixview mixView;
+    private MixView mixView;
     private Matrix rotationM = new Matrix();
     private LocationFinder locationFinder;
     private WebContentManager webContentManager;
 
-    public MixContext(Mixview appCtx) {
+    public MixContext(MixView appCtx) {
         super(appCtx);
         mixView = appCtx;
         getLocationFinder().switchOn();
@@ -45,7 +45,7 @@ public class MixContext extends ContextWrapper implements MixContextInterface {
     public void loadMixViewWebPage(String url) throws Exception {
         getWebContentManager().loadWebPage(url, getActualMixView());
     }
-    public void doResume(Mixview mixView){
+    public void doResume(MixView mixView){
         setActualMixView(mixView);
     }
 
@@ -56,12 +56,12 @@ public class MixContext extends ContextWrapper implements MixContextInterface {
     }
 
 
-    public Mixview getActualMixView() {
+    public MixView getActualMixView() {
         synchronized (mixView)  {
             return this.mixView;
         }
     }
-    public void setActualMixView(Mixview mixView){
+    public void setActualMixView(MixView mixView){
         synchronized (mixView) { this.mixView = mixView; }
     }
 
@@ -72,11 +72,11 @@ public class MixContext extends ContextWrapper implements MixContextInterface {
         return out;
     }
 
-    public Mixview getMixView() {
+    public MixView getMixView() {
         return mixView;
     }
    
-    public void setMixView(Mixview mixView) {
+    public void setMixView(MixView mixView) {
         this.mixView = mixView;
     }
 

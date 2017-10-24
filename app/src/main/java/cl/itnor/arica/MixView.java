@@ -16,11 +16,9 @@ import android.os.Bundle;
 import android.os.PowerManager;
 import android.provider.Settings;
 import android.util.Log;
-import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Toast;
 
@@ -32,7 +30,7 @@ import static android.view.ViewGroup.*;
  * Created by effexts on 1/19/17.
  */
 
-public class Mixview extends Activity implements SensorEventListener, OnTouchListener, DataViewListener {
+public class MixView extends Activity implements SensorEventListener, OnTouchListener, DataViewListener {
     private CameraSurface camScreen;
     private AugmentedView augScreen;
 
@@ -40,7 +38,7 @@ public class Mixview extends Activity implements SensorEventListener, OnTouchLis
     private static PaintScreen paintScreen;
     private static DataView dataView;
     private boolean fError;
-    public static Mixview currentInstance;
+    public static MixView currentInstance;
     public static Bitmap marker_arrow;
 
     private MixViewDataHolder mixViewData;
@@ -336,7 +334,7 @@ public class Mixview extends Activity implements SensorEventListener, OnTouchLis
     }
 
     public static void setPaintScreen(PaintScreen paintScreen) {
-        Mixview.paintScreen = paintScreen;
+        MixView.paintScreen = paintScreen;
     }
 
     public static DataView getDataView() {
@@ -344,7 +342,7 @@ public class Mixview extends Activity implements SensorEventListener, OnTouchLis
     }
 
     public static void setDataView(DataView dataView) {
-        Mixview.dataView = dataView;
+        MixView.dataView = dataView;
     }
 
     public boolean isfError() {
@@ -355,12 +353,12 @@ public class Mixview extends Activity implements SensorEventListener, OnTouchLis
         this.fError = fError;
     }
 
-    public static Mixview getCurrentInstance() {
+    public static MixView getCurrentInstance() {
         return currentInstance;
     }
 
-    public static void setCurrentInstance(Mixview currentInstance) {
-        Mixview.currentInstance = currentInstance;
+    public static void setCurrentInstance(MixView currentInstance) {
+        MixView.currentInstance = currentInstance;
     }
 
     public static Bitmap getMarker_arrow() {
@@ -368,7 +366,7 @@ public class Mixview extends Activity implements SensorEventListener, OnTouchLis
     }
 
     public static void setMarker_arrow(Bitmap marker_arrow) {
-        Mixview.marker_arrow = marker_arrow;
+        MixView.marker_arrow = marker_arrow;
     }
     private MixViewDataHolder getMixViewData() {
         if (mixViewData == null) { mixViewData = new MixViewDataHolder(new MixContext(this)); }
