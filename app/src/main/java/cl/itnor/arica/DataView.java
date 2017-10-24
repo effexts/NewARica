@@ -240,7 +240,7 @@ public class DataView {
                 Marker pm = dataHandler.getMarker(i);
                 eventHandled = pm.fClick(event.x, event.y, mixContext, state);
                 if (eventHandled) {
-                    Mixview.currentInstance.selectedMarker(dataHandler.getMarker(i).getTitle());
+                    MixView.currentInstance.selectedMarker(dataHandler.getMarker(i).getTitle());
                     break;
                 }
             }
